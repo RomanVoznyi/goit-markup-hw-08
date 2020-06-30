@@ -1,0 +1,38 @@
+.client-list {
+  margin: -15px;
+  @include flex($cross: flex-start);
+  flex-wrap: wrap;
+}
+
+.client-item {
+  width: calc((100% - 2 * 30px) / 2);
+  height: 90px;
+  margin: 15px;
+
+  border: 1px solid $logo-icons-color;
+  border-radius: 4px;
+  fill: $logo-icons-color;
+
+  @include transition(fill, border-color);
+
+  &:hover,
+  &:focus {
+    fill: $accent-font-color;
+    border-color: $accent-font-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 6 * 30px) / 6);
+  }
+}
+
+.client-link {
+  @include flex();
+  @include all-space();
+
+  fill: inherit;
+}

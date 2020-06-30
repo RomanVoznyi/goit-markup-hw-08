@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title class="is-hidden" lang="en">Web Studio v.8</title>
+  <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="./css/portfolio.min.css" />
+</head>
+
+<body>
+  <!--Шапка документа-->
+  <header class="header with-border">
+    <div class="container">
+      <nav class="nav">
+        <a class="header-logo" href="./index.html" lang="en"><span class="logo-firstword">Web</span>Studio</a>
+        <button type="button" class="button-menu" data-menu aria-label="Меню навигации">
+          <svg class="icon-menu">
+            <use class="icon-burger" href="./img/sprite.svg#icon-menu"></use>
+            <use class="icon-cross" href="./img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <div class="nav-container">
+          <ul class="pages-list">
+            <li class="pages-item">
+              <a class="page-link" href="./index.html">Студия</a>
+            </li>
+            <li class="pages-item">
+              <a class="page-link active-page" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="pages-item">
+              <a class="page-link" href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <ul class="contacts-list">
+            <li class="contacts-item">
+              <a
+                 class="contacts-link"
+                 href="mailto:info@devstudio.com"
+                 target="_blank">
+                <svg class="icon-envelope">
+                  <use href="./img/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+            <li class="contacts-item">
+              <a
+                 class="contacts-link"
+                 href="tel:+380961111111"
+                 target="_blank">
+                <svg class="icon-phone">
+                  <use href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <!--Основной документ-->
+  <main>
+    <section class="section mobile-version">
+      <div class="container">
+        <h1 class="is-hidden">Portfolio</h1>
+        <form class="projects-form js-filter">
+          <div class="filter-box" role="group">
+            <label class="filter-item"><input
+                     type="radio"
+                     class="filter-radio is-hidden"
+                     name="filter"
+                     id="filt-all"
+                     value="filt-all"
+                     checked />
+              <span class="filter-button label-all">Все</span>
+            </label>
+            <label class="filter-item"><input
+                     type="radio"
+                     class="filter-radio is-hidden"
+                     name="filter"
+                     id="filt-web"
+                     value="filt-web" />
+              <span class="filter-button label-web">Веб-сайты</span>
+            </label>
+            <label class="filter-item"><input
+                     type="radio"
+                     class="filter-radio is-hidden"
+                     name="filter"
+                     id="filt-widg"
+                     value="filt-widg" />
+              <span class="filter-button label-widg">Приложения</span>
+            </label>
+            <label class="filter-item"><input
+                     type="radio"
+                     class="filter-radio is-hidden"
+                     name="filter"
+                     id="filt-design"
+                     value="filt-design" />
+              <span class="filter-button label-design">Дизайн</span>
+            </label>
+            <label class="filter-item"><input
+                     type="radio"
+                     class="filter-radio is-hidden"
+                     name="filter"
+                     id="filt-mark"
+                     value="filt-mark" />
+              <span class="filter-button label-mark">Маркетинг</span>
+            </label>
+          </div>
+          <ul class="project-list">
+            <li class="project-item type-web">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/tehno/480/tehno480.webp      450w,
+                        ./img/portfolio-img/tehno/480/tehno480@2x.webp   900w,
+                        ./img/portfolio-img/tehno/480/tehno480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/tehno/768/tehno768.webp      354w,
+                        ./img/portfolio-img/tehno/768/tehno768@2x.webp   708w,
+                        ./img/portfolio-img/tehno/768/tehno768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/tehno/1600/tehno1600.webp      370w,
+                        ./img/portfolio-img/tehno/1600/tehno1600@2x.webp   740w,
+                        ./img/portfolio-img/tehno/1600/tehno1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/tehno/480/tehno480.jpg      450w,
+                        ./img/portfolio-img/tehno/480/tehno480@2x.jpg   900w,
+                        ./img/portfolio-img/tehno/480/tehno480@3x.jpg  1350w,
+                        ./img/portfolio-img/tehno/768/tehno768.jpg      354w,
+                        ./img/portfolio-img/tehno/768/tehno768@2x.jpg   708w,
+                        ./img/portfolio-img/tehno/768/tehno768@3x.jpg  1062w,
+                        ./img/portfolio-img/tehno/1600/tehno1600.jpg      370w,
+                        ./img/portfolio-img/tehno/1600/tehno1600@2x.jpg   740w,
+                        ./img/portfolio-img/tehno/1600/tehno1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/tehno/480/tehno480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Технокряк</h2>
+                  <p class="project-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-design">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/basket/480/basket480.webp      450w,
+                        ./img/portfolio-img/basket/480/basket480@2x.webp   900w,
+                        ./img/portfolio-img/basket/480/basket480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/basket/768/basket768.webp      354w,
+                        ./img/portfolio-img/basket/768/basket768@2x.webp   708w,
+                        ./img/portfolio-img/basket/768/basket768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/basket/1600/basket1600.webp      370w,
+                        ./img/portfolio-img/basket/1600/basket1600@2x.webp   740w,
+                        ./img/portfolio-img/basket/1600/basket1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/basket/480/basket480.jpg      450w,
+                        ./img/portfolio-img/basket/480/basket480@2x.jpg   900w,
+                        ./img/portfolio-img/basket/480/basket480@3x.jpg  1350w,
+                        ./img/portfolio-img/basket/768/basket768.jpg      354w,
+                        ./img/portfolio-img/basket/768/basket768@2x.jpg   708w,
+                        ./img/portfolio-img/basket/768/basket768@3x.jpg  1062w,
+                        ./img/portfolio-img/basket/1600/basket1600.jpg      370w,
+                        ./img/portfolio-img/basket/1600/basket1600@2x.jpg   740w,
+                        ./img/portfolio-img/basket/1600/basket1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/basket/480/basket480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">
+                    Постер New Orlean vs Golden Star
+                  </h2>
+                  <p class="project-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-widg">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/seafood/480/seafood480.webp      450w,
+                        ./img/portfolio-img/seafood/480/seafood480@2x.webp   900w,
+                        ./img/portfolio-img/seafood/480/seafood480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/seafood/768/seafood768.webp      354w,
+                        ./img/portfolio-img/seafood/768/seafood768@2x.webp   708w,
+                        ./img/portfolio-img/seafood/768/seafood768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/seafood/1600/seafood1600.webp      370w,
+                        ./img/portfolio-img/seafood/1600/seafood1600@2x.webp   740w,
+                        ./img/portfolio-img/seafood/1600/seafood1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/seafood/480/seafood480.jpg      450w,
+                        ./img/portfolio-img/seafood/480/seafood480@2x.jpg   900w,
+                        ./img/portfolio-img/seafood/480/seafood480@3x.jpg  1350w,
+                        ./img/portfolio-img/seafood/768/seafood768.jpg      354w,
+                        ./img/portfolio-img/seafood/768/seafood768@2x.jpg   708w,
+                        ./img/portfolio-img/seafood/768/seafood768@3x.jpg  1062w,
+                        ./img/portfolio-img/seafood/1600/seafood1600.jpg      370w,
+                        ./img/portfolio-img/seafood/1600/seafood1600@2x.jpg   740w,
+                        ./img/portfolio-img/seafood/1600/seafood1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/seafood/480/seafood480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Ресторан Seafood</h2>
+                  <p class="project-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-mark">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/headphones/480/headphones480.webp      450w,
+                        ./img/portfolio-img/headphones/480/headphones480@2x.webp   900w,
+                        ./img/portfolio-img/headphones/480/headphones480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/headphones/768/headphones768.webp      354w,
+                        ./img/portfolio-img/headphones/768/headphones768@2x.webp   708w,
+                        ./img/portfolio-img/headphones/768/headphones768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/headphones/1600/headphones1600.webp      370w,
+                        ./img/portfolio-img/headphones/1600/headphones1600@2x.webp   740w,
+                        ./img/portfolio-img/headphones/1600/headphones1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/headphones/480/headphones480.jpg      450w,
+                        ./img/portfolio-img/headphones/480/headphones480@2x.jpg   900w,
+                        ./img/portfolio-img/headphones/480/headphones480@3x.jpg  1350w,
+                        ./img/portfolio-img/headphones/768/headphones768.jpg      354w,
+                        ./img/portfolio-img/headphones/768/headphones768@2x.jpg   708w,
+                        ./img/portfolio-img/headphones/768/headphones768@3x.jpg  1062w,
+                        ./img/portfolio-img/headphones/1600/headphones1600.jpg      370w,
+                        ./img/portfolio-img/headphones/1600/headphones1600@2x.jpg   740w,
+                        ./img/portfolio-img/headphones/1600/headphones1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/headphones/480/headphones480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Проект Prime</h2>
+                  <p class="project-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-widg">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/boxes/480/boxes480.webp      450w,
+                        ./img/portfolio-img/boxes/480/boxes480@2x.webp   900w,
+                        ./img/portfolio-img/boxes/480/boxes480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/boxes/768/boxes768.webp      354w,
+                        ./img/portfolio-img/boxes/768/boxes768@2x.webp   708w,
+                        ./img/portfolio-img/boxes/768/boxes768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/boxes/1600/boxes1600.webp      370w,
+                        ./img/portfolio-img/boxes/1600/boxes1600@2x.webp   740w,
+                        ./img/portfolio-img/boxes/1600/boxes1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/boxes/480/boxes480.jpg      450w,
+                        ./img/portfolio-img/boxes/480/boxes480@2x.jpg   900w,
+                        ./img/portfolio-img/boxes/480/boxes480@3x.jpg  1350w,
+                        ./img/portfolio-img/boxes/768/boxes768.jpg      354w,
+                        ./img/portfolio-img/boxes/768/boxes768@2x.jpg   708w,
+                        ./img/portfolio-img/boxes/768/boxes768@3x.jpg  1062w,
+                        ./img/portfolio-img/boxes/1600/boxes1600.jpg      370w,
+                        ./img/portfolio-img/boxes/1600/boxes1600@2x.jpg   740w,
+                        ./img/portfolio-img/boxes/1600/boxes1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/boxes/480/boxes480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Проект Boxes</h2>
+                  <p class="project-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-web">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/monitor/480/monitor480.webp      450w,
+                        ./img/portfolio-img/monitor/480/monitor480@2x.webp   900w,
+                        ./img/portfolio-img/monitor/480/monitor480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/monitor/768/monitor768.webp      354w,
+                        ./img/portfolio-img/monitor/768/monitor768@2x.webp   708w,
+                        ./img/portfolio-img/monitor/768/monitor768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/monitor/1600/monitor1600.webp      370w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@2x.webp   740w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/monitor/480/monitor480.jpg      450w,
+                        ./img/portfolio-img/monitor/480/monitor480@2x.jpg   900w,
+                        ./img/portfolio-img/monitor/480/monitor480@3x.jpg  1350w,
+                        ./img/portfolio-img/monitor/768/monitor768.jpg      354w,
+                        ./img/portfolio-img/monitor/768/monitor768@2x.jpg   708w,
+                        ./img/portfolio-img/monitor/768/monitor768@3x.jpg  1062w,
+                        ./img/portfolio-img/monitor/1600/monitor1600.jpg      370w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@2x.jpg   740w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/monitor/480/monitor480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Inspiration has no Borders</h2>
+                  <p class="project-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-design">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/magazine/480/magazine480.webp      450w,
+                        ./img/portfolio-img/magazine/480/magazine480@2x.webp   900w,
+                        ./img/portfolio-img/magazine/480/magazine480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/magazine/768/magazine768.webp      354w,
+                        ./img/portfolio-img/magazine/768/magazine768@2x.webp   708w,
+                        ./img/portfolio-img/magazine/768/magazine768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/magazine/1600/magazine1600.webp      370w,
+                        ./img/portfolio-img/magazine/1600/magazine1600@2x.webp   740w,
+                        ./img/portfolio-img/magazine/1600/magazine1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/magazine/480/magazine480.jpg      450w,
+                        ./img/portfolio-img/magazine/480/magazine480@2x.jpg   900w,
+                        ./img/portfolio-img/magazine/480/magazine480@3x.jpg  1350w,
+                        ./img/portfolio-img/magazine/768/magazine768.jpg      354w,
+                        ./img/portfolio-img/magazine/768/magazine768@2x.jpg   708w,
+                        ./img/portfolio-img/magazine/768/magazine768@3x.jpg  1062w,
+                        ./img/portfolio-img/magazine/1600/magazine1600.jpg      370w,
+                        ./img/portfolio-img/magazine/1600/magazine1600@2x.jpg   740w,
+                        ./img/portfolio-img/magazine/1600/magazine1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/magazine/480/magazine480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Издание Limited Edition</h2>
+                  <p class="project-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-mark">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/tag/480/tag480.webp      450w,
+                        ./img/portfolio-img/tag/480/tag480@2x.webp   900w,
+                        ./img/portfolio-img/tag/480/tag480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/tag/768/tag768.webp      354w,
+                        ./img/portfolio-img/tag/768/tag768@2x.webp   708w,
+                        ./img/portfolio-img/tag/768/tag768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/tag/1600/tag1600.webp      370w,
+                        ./img/portfolio-img/tag/1600/tag1600@2x.webp   740w,
+                        ./img/portfolio-img/tag/1600/tag1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/tag/480/tag480.jpg      450w,
+                        ./img/portfolio-img/tag/480/tag480@2x.jpg   900w,
+                        ./img/portfolio-img/tag/480/tag480@3x.jpg  1350w,
+                        ./img/portfolio-img/tag/768/tag768.jpg      354w,
+                        ./img/portfolio-img/tag/768/tag768@2x.jpg   708w,
+                        ./img/portfolio-img/tag/768/tag768@3x.jpg  1062w,
+                        ./img/portfolio-img/tag/1600/tag1600.jpg      370w,
+                        ./img/portfolio-img/tag/1600/tag1600@2x.jpg   740w,
+                        ./img/portfolio-img/tag/1600/tag1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/tag/480/tag480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Проект LAB</h2>
+                  <p class="project-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="project-item type-widg">
+              <a class="project-link" href="">
+                <div class="project-foto-box">
+                  <picture>
+                    <source
+                            srcset="
+                        ./img/portfolio-img/laptop/480/laptop480.webp      450w,
+                        ./img/portfolio-img/laptop/480/laptop480@2x.webp   900w,
+                        ./img/portfolio-img/laptop/480/laptop480@3x.webp  1350w"
+                            type="image/webp"
+                            media="(max-width: 767px)"
+                            sizes="100vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/laptop/768/laptop768.webp      354w,
+                        ./img/portfolio-img/laptop/768/laptop768@2x.webp   708w,
+                        ./img/portfolio-img/laptop/768/laptop768@3x.webp  1062w"
+                            type="image/webp"
+                            media="(max-width: 1599px)"
+                            sizes="50vw">
+                    <source
+                            srcset="
+                        ./img/portfolio-img/laptop/1600/laptop1600.webp      370w,
+                        ./img/portfolio-img/laptop/1600/laptop1600@2x.webp   740w,
+                        ./img/portfolio-img/laptop/1600/laptop1600@3x.webp  1110w"
+                            type="image/webp"
+                            media="(min-width: 1600px)"
+                            sizes="25vw">
+                    <img
+                         srcset="
+                        ./img/portfolio-img/laptop/480/laptop480.jpg      450w,
+                        ./img/portfolio-img/laptop/480/laptop480@2x.jpg   900w,
+                        ./img/portfolio-img/laptop/480/laptop480@3x.jpg  1350w,
+                        ./img/portfolio-img/laptop/768/laptop768.jpg      354w,
+                        ./img/portfolio-img/laptop/768/laptop768@2x.jpg   708w,
+                        ./img/portfolio-img/laptop/768/laptop768@3x.jpg  1062w,
+                        ./img/portfolio-img/laptop/1600/laptop1600.jpg      370w,
+                        ./img/portfolio-img/laptop/1600/laptop1600@2x.jpg   740w,
+                        ./img/portfolio-img/laptop/1600/laptop1600@3x.jpg  1110w"
+                         sizes="(min-width: 1600px) 370px, (min-width: 768px) 354px, 100vw"
+                         src="./img/portfolio-img/laptop/480/laptop480.jpg"
+                         alt="project-image">
+                  </picture>
+                  <p class="hover-text flex">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="project-title-box">
+                  <h2 class="project-title">Growing Business</h2>
+                  <p class="project-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!--Футер документа-->
+  <footer class="foot-section">
+    <div class="container foot-container">
+      <div class="foot-first-level">
+        <div class="foot-adress-box">
+          <a class="foot-logo" href="./index.html" lang="en"><span
+                  class="logo-firstword">Web</span>Studio</a>
+          <address>
+            <ul class="foot-adress-list">
+              <li class="foot-adress-item">
+                <a
+                   class="foot-adress"
+                   href="https://www.google.com.ua/maps/place/бульвар+Леси+Украинки,+26,+Киев,+02000"
+                   target="_blank">г. Киев, пр-т Леси Украинки, 26</a>
+              </li>
+              <li class="foot-adress-item">
+                <a
+                   class="foot-mail"
+                   href="mailto:info@example.com"
+                   target="_blank">info@example.com</a>
+              </li>
+              <li class="foot-adress-item">
+                <a class="foot-phone" href="tel:+380991111111" target="_blank">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="foot-links-box">
+          <strong class="foot-links-title">присоединяйтесь</strong>
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.instagram.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://twitter.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.facebook.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.linkedin.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-signin-box">
+        <strong class="foot-signin-title">подпишитесь на рассылку</strong>
+        <form class="signin-form js-signin" autocomplete="off">
+          <input
+                 type="email"
+                 class="foot-input"
+                 name="e-mail"
+                 placeholder="E-mail"
+                 required />
+          <button type="submit" class="button">
+            Подписаться
+            <svg class="button-icon">
+              <use href="./img/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/signin.js"></script>
+  <script src="./js/filter.js"></script>
+</body>
+
+</html>

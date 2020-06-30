@@ -1,0 +1,122 @@
+body {
+  @include font();
+
+  color: $basic-font-color;
+  background-color: $background-basic-color;
+}
+
+.section {
+  padding: $sec-pad-mob 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: $sec-pad-desk 0;
+  }
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: $mobile;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $container-width;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin-top: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  display: inline-flex;
+  min-width: 200px;
+  height: 50px;
+  padding: 0px 28px;
+  align-items: center;
+  justify-content: center;
+
+  @include font(700, 16px, 1.87, 0.06em);
+
+  border-width: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include accent-style;
+  box-shadow: $shadow-button;
+
+  &:focus {
+    outline-width: 0px;
+  }
+}
+
+.title {
+  margin-bottom: 30px;
+
+  @include font(700, 28px, 1.18);
+  text-align: center;
+
+  color: $header-font-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.17);
+  }
+}
+
+.social-list {
+  @include flex();
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.is-hidden {
+  position: absolute;
+  color: transparent;
+  font-size: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  clip: rect(0 0 0 0);
+  border: none;
+}
+
+.is-close {
+  display: none;
+}

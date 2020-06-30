@@ -1,0 +1,38 @@
+.job-section {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    padding-bottom: $sec-pad-desk;
+  }
+}
+
+.job-list {
+  display: flex;
+}
+
+.job-item {
+  position: relative;
+  width: 370px;
+  border-radius: 4px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.job-title {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 27px 0px;
+  margin-bottom: 0px;
+
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $additional-font-color;
+  background-color: $overlay-color;
+  border-radius: 0px 0px 4px 4px;
+}

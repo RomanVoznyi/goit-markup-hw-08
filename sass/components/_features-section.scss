@@ -1,0 +1,37 @@
+.adv-list {
+  margin: -15px;
+
+  @media screen and (min-width: $tablet) {
+    @include flex($cross:flex-start);
+    flex-wrap: wrap;
+  }
+}
+
+.adv-list-item {
+  display: inline-block;
+  width: calc(100% - 30px);
+  margin: 15px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 4 * 30px) / 4);
+  }
+}
+
+.adv-title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: $header-font-color;
+}
+
+.adv-description {
+  margin-bottom: 0px;
+
+  line-height: 1.71;
+}

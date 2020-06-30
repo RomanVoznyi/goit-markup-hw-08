@@ -1,0 +1,145 @@
+.mobile-version {
+  @media screen and (max-width: $tablet - 1) {
+    margin-top: 61px;
+  }
+}
+
+.filter-box {
+  @include flex(left, flex-start);
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    @include flex(center, flex-start);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.filter-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: $tablet - 1) {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.filter-button {
+  display: block;
+  min-width: max-content;
+  padding: 6px 22px;
+
+  @include font(500, 16px, 1.62);
+  border-radius: 4px;
+  cursor: pointer;
+
+  color: $header-font-color;
+  background-color: $background-additional-color;
+
+  @include transition(color, background-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    @include accent-style();
+    box-shadow: $shadow-filter;
+  }
+
+  .filter-radio:checked + & {
+    @include accent-style();
+    box-shadow: $shadow-filter;
+  }
+}
+
+.project-list {
+  margin: -15px;
+
+  @media screen and (min-width: $tablet) {
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+  }
+}
+
+.project-item {
+  display: inline-block;
+
+  width: calc(100% - 30px);
+  margin: 15px;
+
+  @include transition(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-projects;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px * 2) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 30px * 3) / 3);
+  }
+}
+
+.project-link {
+  @include all-space();
+}
+
+.project-foto-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 0px;
+
+  height: 100%;
+  padding: 24px;
+  margin-bottom: 0px;
+
+  @include font($size: 18px, $height: 1.56);
+
+  color: $additional-font-color;
+  background: $hovertext-backdrop-color;
+
+  transform: translateY(100%);
+  @include transition(transform);
+
+  .project-item:hover &,
+  .project-item:focus & {
+    transform: translateY(0%);
+  }
+}
+
+.project-title-box {
+  padding: 20px 22px;
+  border: 1px solid $project-border-color;
+  border-top: none;
+}
+
+.project-title {
+  margin-bottom: 4px;
+
+  @include font(700, 18px, 2, 0.06em);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  color: $header-font-color;
+}
+
+.project-type {
+  margin-bottom: 0px;
+
+  @include font($size: 16px, $height: 1.87);
+
+  color: $basic-font-color;
+}

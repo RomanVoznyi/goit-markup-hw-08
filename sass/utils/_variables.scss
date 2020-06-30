@@ -1,0 +1,43 @@
+// Font colors
+$basic-font-color: #757575;
+$header-font-color: #212121;
+$accent-font-color: #2196f3;
+$additional-font-color: #ffffff;
+$contacts-font-color: rgba(255, 255, 255, 0.6); //footer
+
+$logo-icons-color: #afb1b8;
+$modal-icons-color: #000000;
+$section-border-color: #ececec; //header at portfolio and contacts pages
+$footinput-border-color: rgba(255, 255, 255, 0.3); //footer
+$popupinput-border-color: rgba(33, 33, 33, 0.2); //popup
+$close-border-color: rgba(0, 0, 0, 0.1); //popup close-button
+$project-border-color: #eeeeee; //portfolio
+
+// Background colors
+$background-basic-color: #ffffff;
+$background-additional-color: #f5f4fa;
+$background-footer-color: #2f303a;
+$overlay-color: rgba(47, 48, 58, 0.8); //hero-section
+$popup-backdrop-color: rgba(0, 0, 0, 0.2); //popup
+$footer-backdrop-color: rgba(255, 255, 255, 0.1); //footer-social-backdrop
+$hovertext-backdrop-color: rgba(33, 150, 243, 0.9); // portfolio
+
+// Time duration function
+$time-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// width, height, padding
+$biggest-width: 1600px;
+$container-width: 1200px;
+$sec-pad-desk: 94px;
+$sec-pad-mob: 60px;
+
+// box-shadow
+$shadow-menu: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+  0px 4px 8px rgba(0, 0, 0, 0.04); //mobile-menu
+$shadow-button: 0px 4px 4px rgba(71, 71, 71, 0.15); // buttons and foot-input
+$shadow-team: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 1px 3px rgba(0, 0, 0, 0.12); // team-box and popup
+$shadow-filter: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 3px 1px rgba(0, 0, 0, 0.1); // portfolio-page
+$shadow-projects: 1px 4px 6px rgba(0, 0, 0, 0.16),
+  0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12); // portfolio-page

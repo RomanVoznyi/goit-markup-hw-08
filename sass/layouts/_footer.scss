@@ -1,0 +1,150 @@
+.foot-section {
+  background-color: $background-footer-color;
+  padding: $sec-pad-mob 0;
+}
+
+.foot-container {
+  @media screen and (min-width: $desktop) {
+    @include flex(left, baseline);
+  }
+}
+
+.foot-first-level {
+  @media screen and (min-width: $tablet) {
+    @include flex(space-between, baseline);
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include flex(left, baseline);
+  }
+}
+
+.foot-adress-box {
+  margin-bottom: 60px;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+}
+
+.foot-adress-list {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.foot-adress-item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.foot-adress {
+  display: inline-block;
+  color: $additional-font-color;
+}
+
+.foot-mail,
+.foot-phone {
+  display: inline-block;
+  color: $contacts-font-color;
+}
+
+.foot-links-box {
+  margin-bottom: 60px;
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
+    text-align: left;
+  }
+}
+
+.foot-links-title {
+  display: block;
+  margin-bottom: 21px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: $additional-font-color;
+}
+
+.foot-social-link {
+  @include flex();
+  @include all-space();
+  border-radius: 50%;
+
+  fill: $additional-font-color;
+  background-color: $footer-backdrop-color;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-font-color;
+  }
+}
+
+.foot-signin-box {
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    margin-left: auto;
+  }
+}
+
+.signin-form {
+  @media screen and (min-width: $desktop) {
+    @include flex(left);
+  }
+}
+
+.foot-signin-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $additional-font-color;
+}
+
+.foot-input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  padding: 0px 15px;
+
+  @include font($size: 16px, $height: 1.25);
+
+  color: $contacts-font-color;
+  background-color: inherit;
+  border: 1px solid $footinput-border-color;
+  box-shadow: $shadow-button;
+  border-radius: 4px;
+
+  &:focus {
+    outline-width: 0px;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
+    width: 358px;
+    margin-left: 0px;
+    margin-right: 12px;
+    margin-bottom: 0px;
+  }
+}

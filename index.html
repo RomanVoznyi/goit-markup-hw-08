@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title class="is-hidden" lang="en">Web Studio v.8</title>
+  <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="./css/index.min.css">
+</head>
+
+<body>
+  <!--Шапка документа-->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a class="header-logo" href="./index.html" lang="en"><span class="logo-firstword">Web</span>Studio</a>
+        <button type="button" class="button-menu" data-menu aria-label="Меню навигации">
+          <svg class="icon-menu">
+            <use class="icon-burger" href="./img/sprite.svg#icon-menu"></use>
+            <use class="icon-cross" href="./img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <div class="nav-container">
+          <ul class="pages-list">
+            <li class="pages-item">
+              <a class="page-link active-page" href="./index.html">Студия</a>
+            </li>
+            <li class="pages-item">
+              <a class="page-link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="pages-item">
+              <a class="page-link" href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <ul class="contacts-list">
+            <li class="contacts-item">
+              <a
+                 class="contacts-link"
+                 href="mailto:info@devstudio.com"
+                 target="_blank">
+                <svg class="icon-envelope">
+                  <use href="./img/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+            <li class="contacts-item">
+              <a
+                 class="contacts-link"
+                 href="tel:+380961111111"
+                 target="_blank">
+                <svg class="icon-phone">
+                  <use href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <!--Основной документ-->
+  <main>
+    <!--Главная секция-->
+    <section class="hero-section">
+      <h1>
+        эффективные решения <br />
+        для вашего бизнеса
+      </h1>
+      <button class="button" data-open-modal>
+        Заказать услугу
+      </button>
+    </section>
+
+    <!--Секция Преимущества-->
+    <section class="section">
+      <div class="container">
+        <h2 class="is-hidden">Преимущества</h2>
+        <ul class="adv-list">
+          <li class="adv-list-item">
+            <svg class="adv-icon">
+              <use href="./img/sprite.svg#icon-antenna"></use>
+            </svg>
+            <h3 class="adv-title">Внимание к деталям</h3>
+            <p class="adv-description">
+              Идейные соображения, а также начало повседневной работы по
+              формированию позиции.
+            </p>
+          </li>
+          <li class="adv-list-item">
+            <svg class="adv-icon">
+              <use href="./img/sprite.svg#icon-clock"></use>
+            </svg>
+            <h3 class="adv-title">Пунктуальность</h3>
+            <p class="adv-description">
+              Задача организации, в особенности же рамки и место обучения
+              кадров влечет за собой.
+            </p>
+          </li>
+          <li class="adv-list-item">
+            <svg class="adv-icon">
+              <use href="./img/sprite.svg#icon-pc"></use>
+            </svg>
+            <h3 class="adv-title">Планирование</h3>
+            <p class="adv-description">
+              Равным образом консультация с широким активом в значительной
+              степени обуславливает.
+            </p>
+          </li>
+          <li class="adv-list-item">
+            <svg class="adv-icon">
+              <use href="./img/sprite.svg#icon-astronaut"></use>
+            </svg>
+            <h3 class="adv-title">Современные технологии</h3>
+            <p class="adv-description">
+              Значимость этих проблем настолько очевидна, что реализация
+              плановых заданий.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Секция Наша деятельность-->
+    <section class="job-section">
+      <div class="container">
+        <h2 class="title">Чем мы занимаемся</h2>
+        <ul class="job-list">
+          <li class="job-item">
+            <picture>
+              <source
+                      srcset="
+                    ./img/portfolio-img/laptop/1600/laptop1600.webp      370w,
+                    ./img/portfolio-img/laptop/1600/laptop1600@2x.webp   740w,
+                    ./img/portfolio-img/laptop/1600/laptop1600@3x.webp  1110w"
+                      type="image/webp"
+                      media="(min-width: 1600px)"
+                      sizes="25vw">
+              <img
+                   srcset=" 
+                    ./img/portfolio-img/laptop/1600/laptop1600.jpg      370w,
+                    ./img/portfolio-img/laptop/1600/laptop1600@2x.jpg   740w,
+                    ./img/portfolio-img/laptop/1600/laptop1600@3x.jpg  1110w"
+                   sizes="25vw"
+                   src="./img/portfolio-img/laptop/1600/laptop1600.jpg"
+                   alt="laptop-image">
+            </picture>
+            <a href="./portfolio.html">
+              <h3 class="job-title">Десктопные приложения</h3>
+            </a>
+          </li>
+          <li class="job-item">
+            <picture>
+              <source
+                      srcset="
+                    ./img/index-img/job/mobile/1600/mobile370.webp      370w,
+                    ./img/index-img/job/mobile/1600/mobile740@2x.webp   740w,
+                    ./img/index-img/job/mobile/1600/mobile1110@3x.webp  1110w"
+                      type="image/webp"
+                      sizes="25vw">
+              <img
+                   srcset="
+                    ./img/index-img/job/mobile/1600/mobile370.jpg      370w,
+                    ./img/index-img/job/mobile/1600/mobile740@2x.jpg   740w,
+                    ./img/index-img/job/mobile/1600/mobile1110@3x.jpg  1110w"
+                   sizes="25vw"
+                   src="./img/index-img/job/mobile/1600/mobile370.jpg"
+                   alt="smartphone-image">
+            </picture>
+            <a href="./portfolio.html">
+              <h3 class="job-title">Мобильные приложения</h3>
+            </a>
+          </li>
+          <li class="job-item">
+            <picture>
+              <source
+                      srcset="
+                        ./img/portfolio-img/monitor/1600/monitor1600.webp      370w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@2x.webp   740w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@3x.webp  1110w"
+                      type="image/webp"
+                      media="(min-width: 1600px)"
+                      sizes="25vw">
+              <img
+                   srcset="
+                        ./img/portfolio-img/monitor/1600/monitor1600.jpg      370w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@2x.jpg   740w,
+                        ./img/portfolio-img/monitor/1600/monitor1600@3x.jpg  1110w"
+                   sizes="25vw"
+                   src="./img/portfolio-img/monitor/1600/monitor1600.jpg"
+                   alt="project-image">
+            </picture>
+            <a href="./portfolio.html">
+              <h3 class="job-title">Дизайнерские решения</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Секция Наша команда-->
+    <section class="section team-box">
+      <div class="container">
+        <h2 class="title">Наша команда</h2>
+        <ul class="team-list">
+          <!--Николай Кучеренко -->
+          <li class="team-item">
+            <picture>
+              <source
+                      srcset="
+                    ./img/index-img/team/kucherenko/480/kucher480.webp      450w,
+                    ./img/index-img/team/kucherenko/480/kucher480@2x.webp   900w,
+                    ./img/index-img/team/kucherenko/480/kucher480@3x.webp  1350w"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      sizes="100vw">
+              <source
+                      srcset="
+                    ./img/index-img/team/kucherenko/768/kucher768.webp      354w,
+                    ./img/index-img/team/kucherenko/768/kucher768@2x.webp   708w,
+                    ./img/index-img/team/kucherenko/768/kucher768@3x.webp  1062w"
+                      type="image/webp"
+                      media="(max-width: 1599px)"
+                      sizes="50vw">
+              <source
+                      srcset="
+                    ./img/index-img/team/kucherenko/1600/kucher1600.webp      270w,
+                    ./img/index-img/team/kucherenko/1600/kucher1600@2x.webp   540w,
+                    ./img/index-img/team/kucherenko/1600/kucher1600@3x.webp  810w"
+                      type="image/webp"
+                      media="(min-width: 1600px)"
+                      sizes="25vw">
+              <img
+                   srcset="
+                    ./img/index-img/team/kucherenko/480/kucher480.jpg      450w,
+                    ./img/index-img/team/kucherenko/480/kucher480@2x.jpg   900w,
+                    ./img/index-img/team/kucherenko/480/kucher480@3x.jpg  1350w,
+                    ./img/index-img/team/kucherenko/768/kucher768.jpg      354w,
+                    ./img/index-img/team/kucherenko/768/kucher768@2x.jpg   708w,
+                    ./img/index-img/team/kucherenko/768/kucher768@3x.jpg  1062w,
+                    ./img/index-img/team/kucherenko/1600/kucher1600.webp      270w,
+                    ./img/index-img/team/kucherenko/1600/kucher1600@2x.webp   540w,
+                    ./img/index-img/team/kucherenko/1600/kucher1600@3x.webp  810w"
+                   sizes="(min-width: 1600px) 270px, (min-width: 768px) 354px, 100vw"
+                   src="./img/index-img/team/kucherenko/480/kucher480.jpg"
+                   alt="team-member-image">
+            </picture>
+            <div class="team-inner-box">
+              <h3 class="team-name">
+                Николай Кучеренко
+              </h3>
+              <p class="team-prof">Product Designer</p>
+              <ul class="social-list">
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.instagram.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://twitter.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.facebook.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.linkedin.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!--Ольга Иванова -->
+          <li class="team-item">
+            <picture>
+              <source
+                      srcset="
+                    ./img/index-img/team/ivanova/480/ivanova480.webp      450w,
+                    ./img/index-img/team/ivanova/480/ivanova480@2x.webp   900w,
+                    ./img/index-img/team/ivanova/480/ivanova480@3x.webp  1350w"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      sizes="100vw">
+              <source
+                      srcset="
+                    ./img/index-img/team/ivanova/768/ivanova768.webp      354w,
+                    ./img/index-img/team/ivanova/768/ivanova768@2x.webp   708w,
+                    ./img/index-img/team/ivanova/768/ivanova768@3x.webp  1062w"
+                      type="image/webp"
+                      media="(max-width: 1599px)"
+                      sizes="50vw">
+              <source
+                      srcset="
+                    ./img/index-img/team/ivanova/1600/ivanova1600.webp      270w,
+                    ./img/index-img/team/ivanova/1600/ivanova1600@2x.webp   540w,
+                    ./img/index-img/team/ivanova/1600/ivanova1600@3x.webp  810w"
+                      type="image/webp"
+                      media="(min-width: 1600px)"
+                      sizes="25vw">
+              <img
+                   srcset="
+                    ./img/index-img/team/ivanova/480/ivanova480.jpg      450w,
+                    ./img/index-img/team/ivanova/480/ivanova480@2x.jpg   900w,
+                    ./img/index-img/team/ivanova/480/ivanova480@3x.jpg  1350w,
+                    ./img/index-img/team/ivanova/768/ivanova768.jpg      354w,
+                    ./img/index-img/team/ivanova/768/ivanova768@2x.jpg   708w,
+                    ./img/index-img/team/ivanova/768/ivanova768@3x.jpg  1062w,
+                    ./img/index-img/team/ivanova/1600/ivanova1600.webp      270w,
+                    ./img/index-img/team/ivanova/1600/ivanova1600@2x.webp   540w,
+                    ./img/index-img/team/ivanova/1600/ivanova1600@3x.webp  810w"
+                   sizes="(min-width: 1600px) 270px, (min-width: 768px) 354px, 100vw"
+                   src="./img/index-img/team/ivanova/480/ivanova480.jpg"
+                   alt="team-member-image">
+            </picture>
+            <div class="team-inner-box">
+              <h3 class="team-name">
+                Ольга Иванова
+              </h3>
+              <p class="team-prof">Frontend Developer</p>
+              <ul class="social-list">
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.instagram.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://twitter.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.facebook.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.linkedin.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!--Андрей Шевченко -->
+          <li class="team-item">
+            <picture>
+              <source
+                      srcset="
+                    ./img/index-img/team/shevchenko/480/sheva480.webp      450w,
+                    ./img/index-img/team/shevchenko/480/sheva480@2x.webp   900w,
+                    ./img/index-img/team/shevchenko/480/sheva480@3x.webp  1350w"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      sizes="100vw">
+              <source
+                      srcset="
+                    ./img/index-img/team/shevchenko/768/sheva768.webp      354w,
+                    ./img/index-img/team/shevchenko/768/sheva768@2x.webp   708w,
+                    ./img/index-img/team/shevchenko/768/sheva768@3x.webp  1062w"
+                      type="image/webp"
+                      media="(max-width: 1599px)"
+                      sizes="50vw">
+              <source
+                      srcset="
+                    ./img/index-img/team/shevchenko/1600/sheva1600.webp      270w,
+                    ./img/index-img/team/shevchenko/1600/sheva1600@2x.webp   540w,
+                    ./img/index-img/team/shevchenko/1600/sheva1600@3x.webp  810w"
+                      type="image/webp"
+                      media="(min-width: 1600px)"
+                      sizes="25vw">
+              <img
+                   srcset="
+                    ./img/index-img/team/shevchenko/480/sheva480.jpg      450w,
+                    ./img/index-img/team/shevchenko/480/sheva480@2x.jpg   900w,
+                    ./img/index-img/team/shevchenko/480/sheva480@3x.jpg  1350w,
+                    ./img/index-img/team/shevchenko/768/sheva768.jpg      354w,
+                    ./img/index-img/team/shevchenko/768/sheva768@2x.jpg   708w,
+                    ./img/index-img/team/shevchenko/768/sheva768@3x.jpg  1062w,
+                    ./img/index-img/team/shevchenko/1600/sheva1600.webp      270w,
+                    ./img/index-img/team/shevchenko/1600/sheva1600@2x.webp   540w,
+                    ./img/index-img/team/shevchenko/1600/sheva1600@3x.webp  810w"
+                   sizes="(min-width: 1600px) 270px, (min-width: 768px) 354px, 100vw"
+                   src="./img/index-img/team/shevchenko/480/sheva480.jpg"
+                   alt="team-member-image">
+            </picture>
+            <div class="team-inner-box">
+              <h3 class="team-name">
+                Андрей Шевченко
+              </h3>
+              <p class="team-prof">Marketing</p>
+              <ul class="social-list">
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.instagram.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://twitter.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.facebook.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.linkedin.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!--Иван Николаев -->
+          <li class="team-item">
+            <picture>
+              <source
+                      srcset="
+                  ./img/index-img/team/nikolaev/480/nikol480.webp      450w,
+                  ./img/index-img/team/nikolaev/480/nikol480@2x.webp   900w,
+                  ./img/index-img/team/nikolaev/480/nikol480@3x.webp  1350w"
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      sizes="100vw">
+              <source
+                      srcset="
+                  ./img/index-img/team/nikolaev/768/nikol768.webp      354w,
+                  ./img/index-img/team/nikolaev/768/nikol768@2x.webp   708w,
+                  ./img/index-img/team/nikolaev/768/nikol768@3x.webp  1062w"
+                      type="image/webp"
+                      media="(max-width: 1599px)"
+                      sizes="50vw">
+              <source
+                      srcset="
+                  ./img/index-img/team/nikolaev/1600/nikol1600.webp      270w,
+                  ./img/index-img/team/nikolaev/1600/nikol1600@2x.webp   540w,
+                  ./img/index-img/team/nikolaev/1600/nikol1600@3x.webp  810w"
+                      type="image/webp"
+                      media="(min-width: 1600px)"
+                      sizes="25vw">
+              <img
+                   srcset="
+                  ./img/index-img/team/nikolaev/480/nikol480.jpg      450w,
+                  ./img/index-img/team/nikolaev/480/nikol480@2x.jpg   900w,
+                  ./img/index-img/team/nikolaev/480/nikol480@3x.jpg  1350w,
+                  ./img/index-img/team/nikolaev/768/nikol768.jpg      354w,
+                  ./img/index-img/team/nikolaev/768/nikol768@2x.jpg   708w,
+                  ./img/index-img/team/nikolaev/768/nikol768@3x.jpg  1062w,
+                  ./img/index-img/team/nikolaev/1600/nikol1600.webp      270w,
+                  ./img/index-img/team/nikolaev/1600/nikol1600@2x.webp   540w,
+                  ./img/index-img/team/nikolaev/1600/nikol1600@3x.webp  810w"
+                   sizes="(min-width: 1600px) 270px, (min-width: 768px) 354px, 100vw"
+                   src="./img/index-img/team/nikolaev/480/nikol480.jpg"
+                   alt="team-member-image">
+            </picture>
+            <div class="team-inner-box">
+              <h3 class="team-name">
+                Иван Николаев
+              </h3>
+              <p class="team-prof">UI Designer</p>
+              <ul class="social-list">
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.instagram.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://twitter.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.facebook.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a
+                     class="team-social-link"
+                     href="https://www.linkedin.com"
+                     target="_blank">
+                    <svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Секция Клиенты-->
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Постоянные клиенты</h2>
+        <ul class="client-list">
+          <li class="client-item">
+            <a class="client-link" href="" target="_blank">
+              <svg class="client-icon-one">
+                <use href="./img/sprite.svg#icon-logo-one"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client-item">
+            <a class="client-link" href="" target="_blank">
+              <svg class="client-icon-two">
+                <use href="./img/sprite.svg#icon-logo-two"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client-item">
+            <a class="client-link" href="" target="_blank">
+              <svg class="client-icon-three">
+                <use href="./img/sprite.svg#icon-logo-three"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client-item">
+            <a class="client-link" href="" target="_blank">
+              <svg class="client-icon-four">
+                <use href="./img/sprite.svg#icon-logo-four"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client-item">
+            <a class="client-link" href="" target="_blank">
+              <svg class="client-icon-five">
+                <use href="./img/sprite.svg#icon-logo-five"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="client-item">
+            <a class="client-link" href="" target="_blank">
+              <svg class="client-icon-six">
+                <use href="./img/sprite.svg#icon-logo-six"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!--Футер документа-->
+  <footer class="foot-section">
+    <div class="container foot-container">
+      <div class="foot-first-level">
+        <div class="foot-adress-box">
+          <a class="foot-logo" href="./index.html" lang="en"><span
+                  class="logo-firstword">Web</span>Studio</a>
+          <address>
+            <ul class="foot-adress-list">
+              <li class="foot-adress-item">
+                <a
+                   class="foot-adress"
+                   href="https://www.google.com.ua/maps/place/бульвар+Леси+Украинки,+26,+Киев,+02000"
+                   target="_blank">г. Киев, пр-т Леси Украинки, 26</a>
+              </li>
+              <li class="foot-adress-item">
+                <a
+                   class="foot-mail"
+                   href="mailto:info@example.com"
+                   target="_blank">info@example.com</a>
+              </li>
+              <li class="foot-adress-item">
+                <a class="foot-phone" href="tel:+380991111111" target="_blank">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="foot-links-box">
+          <strong class="foot-links-title">присоединяйтесь</strong>
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.instagram.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://twitter.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.facebook.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.linkedin.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-signin-box">
+        <strong class="foot-signin-title">подпишитесь на рассылку</strong>
+        <form class="signin-form js-signin" autocomplete="off">
+          <input
+                 type="email"
+                 class="foot-input"
+                 name="e-mail"
+                 placeholder="E-mail"
+                 required />
+          <button type="submit" class="button">
+            Подписаться
+            <svg class="button-icon">
+              <use href="./img/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <!--Модалка-->
+  <div class="backdrop visibility-hidden" data-backdrop>
+    <!-- для закрытия при клике в бекдроп -->
+    <a href="#" class="modal-area" data-close-mod-link></a>
+
+    <form class="modal-form js-modal" autocomplete="off">
+      <strong class="modal-title">Оставьте свои данные, мы вам перезвоним</strong>
+      <label class="input-box">
+        <input class="modal-input"
+               type="text"
+               name="name"
+               placeholder=" "
+               required />
+        <span class="modal-label">Имя</span>
+        <svg class="icon-input">
+          <use href="./img/sprite.svg#icon-person"></use>
+        </svg>
+      </label>
+      <label class="input-box">
+        <input class="modal-input"
+               type="tel"
+               name="tel"
+               placeholder=" "
+               required />
+        <span class="modal-label">Телефон</span>
+        <svg class="icon-input">
+          <use href="./img/sprite.svg#icon-tel"></use>
+        </svg></label>
+      <label class="input-box">
+        <input
+               class="modal-input"
+               type="email"
+               name="email"
+               placeholder=" "
+               required />
+        <span class="modal-label">Почта</span>
+        <svg class="icon-input">
+          <use href="./img/sprite.svg#icon-mail"></use>
+        </svg>
+      </label>
+      <label class="input-box text-area">
+        <textarea
+                  class="modal-input text-area"
+                  name="comments"
+                  placeholder=" "></textarea>
+        <span class="modal-label text-area">Комментарий</span>
+      </label>
+      <label class="checkbox-box">
+        <input
+               class="modal-checkbox is-hidden"
+               type="checkbox"
+               name="accept"
+               required />
+        <svg class="icon-checkbox">
+          <use href="./img/sprite.svg#icon-check"></use>
+        </svg>
+        <span class="checkbox-label">Соглашаюсь с рассылкой и принимаю&nbsp;</span>
+        <a class="checkbox-link" href="./publicContract.pdf" target="_blank">Условия договора</a>
+      </label>
+      <button type="submit" class="button">Отправить</button>
+      <button type="reset" class="modal-close" data-close-mod-btn>
+        <svg class="icon-close">
+          <use href="./img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+    </form>
+  </div>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/signin.js"></script>
+</body>
+
+</html>

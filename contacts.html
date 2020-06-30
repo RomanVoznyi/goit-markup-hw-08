@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title class="is-hidden" lang="en">Web Studio v.8</title>
+  <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="./css/contacts.min.css" />
+</head>
+
+<body>
+  <!--Шапка документа-->
+  <header class="header with-border">
+    <div class="container">
+      <nav class="nav">
+        <a class="header-logo" href="./index.html" lang="en"><span class="logo-firstword">Web</span>Studio</a>
+        <button type="button" class="button-menu" data-menu aria-label="Меню навигации">
+          <svg class="icon-menu">
+            <use class="icon-burger" href="./img/sprite.svg#icon-menu"></use>
+            <use class="icon-cross" href="./img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <div class="nav-container">
+          <ul class="pages-list">
+            <li class="pages-item">
+              <a class="page-link" href="./index.html">Студия</a>
+            </li>
+            <li class="pages-item">
+              <a class="page-link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="pages-item">
+              <a class="page-link active-page" href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <ul class="contacts-list">
+            <li class="contacts-item">
+              <a
+                 class="contacts-link"
+                 href="mailto:info@devstudio.com"
+                 target="_blank">
+                <svg class="icon-envelope">
+                  <use href="./img/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+            <li class="contacts-item">
+              <a
+                 class="contacts-link"
+                 href="tel:+380961111111"
+                 target="_blank">
+                <svg class="icon-phone">
+                  <use href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <!--Основной документ-->
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="contact-page-title">Page in development</h1>
+        <img
+             class="contact-page-image"
+             src="https://picsum.photos/300"
+             alt="nice-image" />
+      </div>
+    </section>
+  </main>
+
+  <!--Футер документа-->
+  <footer class="foot-section">
+    <div class="container foot-container">
+      <div class="foot-first-level">
+        <div class="foot-adress-box">
+          <a class="foot-logo" href="./index.html" lang="en"><span
+                  class="logo-firstword">Web</span>Studio</a>
+          <address>
+            <ul class="foot-adress-list">
+              <li class="foot-adress-item">
+                <a
+                   class="foot-adress"
+                   href="https://www.google.com.ua/maps/place/бульвар+Леси+Украинки,+26,+Киев,+02000"
+                   target="_blank">г. Киев, пр-т Леси Украинки, 26</a>
+              </li>
+              <li class="foot-adress-item">
+                <a
+                   class="foot-mail"
+                   href="mailto:info@example.com"
+                   target="_blank">info@example.com</a>
+              </li>
+              <li class="foot-adress-item">
+                <a class="foot-phone" href="tel:+380991111111" target="_blank">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="foot-links-box">
+          <strong class="foot-links-title">присоединяйтесь</strong>
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.instagram.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://twitter.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.facebook.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                 class="foot-social-link"
+                 href="https://www.linkedin.com"
+                 target="_blank">
+                <svg class="social-icon">
+                  <use href="./img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-signin-box">
+        <strong class="foot-signin-title">подпишитесь на рассылку</strong>
+        <form class="signin-form js-signin" autocomplete="off">
+          <input
+                 type="email"
+                 class="foot-input"
+                 name="e-mail"
+                 placeholder="E-mail"
+                 required />
+          <button type="submit" class="button">
+            Подписаться
+            <svg class="button-icon">
+              <use href="./img/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/signin.js"></script>
+</body>
+
+</html>

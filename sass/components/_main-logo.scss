@@ -1,0 +1,27 @@
+.header-logo {
+  @include main-logo(0px, 0px, 24px, 1.17, $header-font-color);
+
+  @media screen and (min-width: $tablet) {
+    @include main-logo(85px, 0px, 24px, 1.17, $header-font-color);
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include main-logo(85px, 0px, 26px, 1.19, $header-font-color);
+  }
+}
+
+.foot-logo {
+  @include main-logo(0px, 20px, 24px, 1.17, $additional-font-color);
+
+  @media screen and (min-width: $desktop) {
+    @include main-logo(0px, 20px, 26px, 1.19, $additional-font-color);
+  }
+}
+
+.logo-firstword {
+  margin-right: 10px;
+
+  font: inherit;
+
+  color: $accent-font-color;
+}

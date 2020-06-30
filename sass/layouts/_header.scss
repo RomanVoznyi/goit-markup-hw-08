@@ -1,0 +1,204 @@
+.header {
+  @media screen and (max-width: $tablet - 1) {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+
+    background-color: $background-basic-color;
+    border-bottom: 1px solid $section-border-color;
+    z-index: 1;
+  }
+}
+
+.nav {
+  @include flex(space-between);
+  padding: 10px 0px;
+
+  @media screen and (min-width: $tablet) {
+    @include flex(left);
+    padding: 0px;
+  }
+}
+
+.nav-container {
+  @media screen and (max-width: $tablet - 1) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    padding: 60px 0px;
+    text-align: center;
+    transform: translateY(1px);
+
+    background-color: $background-basic-color;
+    box-shadow: $shadow-menu;
+
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    @include flex(space-between);
+    flex-grow: 1;
+  }
+}
+
+.button-menu {
+  @media screen and (max-width: $tablet - 1) {
+    @include flex();
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline-width: 0px;
+    cursor: pointer;
+
+    fill: $modal-icons-color;
+    background-color: inherit;
+
+    @include transition(fill);
+
+    &:hover,
+    &:focus {
+      fill: $accent-font-color;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.icon-burger {
+  display: block;
+
+  .button-menu.is-open & {
+    display: none;
+  }
+}
+
+.icon-cross {
+  display: none;
+
+  .button-menu.is-open & {
+    display: block;
+  }
+}
+
+.pages-list {
+  @media screen and (max-width: $tablet - 1) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include flex();
+  }
+}
+
+.pages-item {
+  @media screen and (max-width: $tablet - 1) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.page-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+
+  @include font(500, 18px, 1.17, 0.02em);
+
+  color: $header-font-color;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-font-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include font(500, $spacing: 0.02em);
+    padding: 32px 0px;
+  }
+}
+
+.active-page {
+  color: $accent-font-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: $accent-font-color;
+  }
+}
+
+.contacts-list {
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    @include flex();
+  }
+}
+
+.contacts-item {
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.contacts-link {
+  @include flex();
+  @include font(500, 18px, 1.17, 0.02em);
+
+  color: $basic-font-color;
+  fill: $basic-font-color;
+
+  @include transition(color, fill);
+
+  &:hover,
+  &:focus {
+    color: $accent-font-color;
+    fill: $accent-font-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include font(500, 12px, 1.17, 0.02em);
+    justify-content: left;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 32px 0px;
+    @include font(500, $spacing: 0.02em);
+  }
+}
+
+.with-border {
+  border-bottom: 1px solid $section-border-color;
+}

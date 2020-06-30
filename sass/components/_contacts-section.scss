@@ -1,0 +1,13 @@
+.contact-page-title {
+  @include font(900, 50px);
+  text-align: center;
+
+  color: $header-font-color;
+  text-shadow: $shadow-button;
+}
+
+.contact-page-image {
+  display: block;
+  margin: 0px auto;
+  border-radius: 5px;
+}

@@ -1,0 +1,224 @@
+.backdrop {
+  position: fixed;
+  @include all-space-tl();
+  z-index: 2;
+  padding: 15px;
+  overflow-y: scroll;
+
+  opacity: 1;
+  visibility: visible;
+
+  background: $popup-backdrop-color;
+
+  @include transition(opacity, visibility);
+
+  &.visibility-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.modal-form {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  padding: 40px;
+
+  color: $header-font-color;
+  background-color: $background-basic-color;
+  box-shadow: $shadow-team;
+  border-radius: 4px;
+  text-align: center;
+
+  transform: perspective(600px) scale(1) rotateX(0);
+  @include transition(transform);
+
+  .backdrop.visibility-hidden & {
+    transform: perspective(600px) scale(0.5) rotateX(90deg);
+  }
+
+  @media screen and (min-height: 700px) {
+    top: 50%;
+    transform: perspective(600px) translateY(-50%) scale(1) rotateX(0);
+
+    .backdrop.visibility-hidden & {
+      transform: perspective(600px) translateY(-50%) scale(0.5) rotateX(90deg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+  }
+}
+
+.modal-title {
+  display: inline-block;
+  margin-bottom: 30px;
+
+  @include font(700, 20px, 1.5);
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    @include font(700, 20px, 1.15);
+  }
+}
+
+.input-box {
+  position: relative;
+  display: block;
+  margin-bottom: 28px;
+
+  &.text-area {
+    margin-bottom: 20px;
+  }
+}
+
+.modal-input {
+  position: relative;
+  width: 100%;
+  padding: 11px 15px 11px 41px;
+
+  letter-spacing: 0.01em;
+  border: 1px solid $popupinput-border-color;
+  outline-width: 0px;
+  border-radius: 4px;
+
+  @include transition(border-color);
+
+  &.text-area {
+    height: 120px;
+    resize: none;
+    padding: 11px 15px;
+  }
+  &:focus {
+    border-color: $accent-font-color;
+  }
+}
+
+.modal-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  @include font($height: 1.15, $spacing: 0.01em);
+
+  color: $basic-font-color;
+
+  @include transition(transform, color);
+
+  &.text-area {
+    top: 20px;
+    left: 16px;
+  }
+
+  .modal-input:focus + & {
+    color: $accent-font-color;
+  }
+
+  .modal-input:focus + &,
+  .modal-input:not(:placeholder-shown) + & {
+    font-size: 12px;
+    line-height: 1.17;
+    transform: translateY(-38px) translateX(-26px);
+  }
+
+  .modal-input:focus + &.text-area,
+  .modal-input:not(:placeholder-shown) + &.text-area {
+    transform: translateY(-38px) translateX(0);
+  }
+}
+
+.icon-input {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  fill: $header-font-color;
+
+  @include transition(fill);
+
+  .modal-input:focus ~ & {
+    fill: $accent-font-color;
+  }
+}
+
+.checkbox-box {
+  @include flex();
+  margin: 0px auto 30px;
+}
+
+.icon-checkbox {
+  display: block;
+  min-width: 15px;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  cursor: pointer;
+
+  border: 2px solid $header-font-color;
+  border-radius: 2px;
+
+  @include transition(background-color, border);
+
+  .modal-checkbox:checked + & {
+    background-color: $accent-font-color;
+    border: 1px solid $accent-font-color;
+  }
+}
+
+.checkbox-label {
+  @include font($size: 12px, $height: 1.17);
+  color: $basic-font-color;
+  @media screen and (min-width: $desktop) {
+    @include font($height: 1.71);
+  }
+}
+
+.checkbox-link {
+  @include font($size: 12px, $height: 1.17);
+  color: $accent-font-color;
+  text-decoration: underline;
+  @media screen and (min-width: $desktop) {
+    @include font($height: 1.71);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-30%, 30%);
+
+  @include flex();
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $close-border-color;
+  outline-width: 0px;
+  cursor: pointer;
+
+  background-color: $background-basic-color;
+}
+
+.icon-close {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+
+  fill: $modal-icons-color;
+
+  .modal-close:hover > & {
+    fill: $accent-font-color;
+  }
+}
+
+.modal-area {
+  position: absolute;
+  @include all-space-tl();
+  cursor: default;
+}

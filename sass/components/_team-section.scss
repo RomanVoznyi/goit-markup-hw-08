@@ -1,0 +1,68 @@
+.team-box {
+  background-color: $background-additional-color;
+}
+
+.team-list {
+  margin: -15px;
+
+  @media screen and (min-width: $tablet) {
+    @include flex($cross: flex-start);
+    flex-wrap: wrap;
+  }
+}
+
+.team-item {
+  display: inline-block;
+  margin: 15px;
+  width: calc(100% - 30px);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: $shadow-team;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 4 * 30px) / 4);
+  }
+}
+
+.team-inner-box {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  background-color: $background-basic-color;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.team-name {
+  margin-bottom: 10px;
+
+  @include font(500, 16px, 1.19);
+  text-align: center;
+
+  color: $header-font-color;
+}
+
+.team-prof {
+  margin-bottom: 16px;
+
+  @include font($size: 16px, $height: 1.19);
+  text-align: center;
+}
+
+.team-social-link {
+  @include flex();
+  @include all-space();
+  border-radius: 50%;
+
+  fill: $logo-icons-color;
+
+  @include transition(fill, background-color);
+
+  &:hover,
+  &:focus {
+    fill: $additional-font-color;
+    background-color: $accent-font-color;
+  }
+}

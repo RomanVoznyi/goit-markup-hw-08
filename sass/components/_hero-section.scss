@@ -1,0 +1,92 @@
+.hero-section {
+  margin: 0 auto;
+  padding: 118px 0px;
+
+  //Для фиксированного хедера
+  @media screen and (max-width: $tablet - 1) {
+    margin-top: 61px;
+  }
+
+  //Фон для экранов до 480 (вкл.)
+
+  text-align: center;
+  background-image: linear-gradient($overlay-color, $overlay-color),
+    url(../../img/index-img/hero/480/hero480.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/index-img/hero/480/hero480@2x.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/index-img/hero/480/hero480@3x.jpg);
+  }
+
+  //Фон для экранов больше 480
+
+  @media screen and (min-width: $mobile + 1) {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/index-img/hero/768/hero768.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($overlay-color, $overlay-color),
+        url(../../img/index-img/hero/768/hero768@2x.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: linear-gradient($overlay-color, $overlay-color),
+        url(../../img/index-img/hero/768/hero768@3x.jpg);
+    }
+  }
+
+  //Фон для экранов больше 768
+
+  @media screen and (min-width: $tablet + 1) {
+    background-image: linear-gradient($overlay-color, $overlay-color),
+      url(../../img/index-img/hero/1600/hero1600.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient($overlay-color, $overlay-color),
+        url(../../img/index-img/hero/1600/hero1600@2x.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: linear-gradient($overlay-color, $overlay-color),
+        url(../../img/index-img/hero/1600/hero1600@3x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 200px 0px;
+    max-width: $biggest-width;
+  }
+}
+
+h1 {
+  margin-bottom: 30px;
+
+  @include font(900, 26px, 1.62, 0.06em);
+  text-transform: uppercase;
+
+  color: $additional-font-color;
+
+  @media screen and (min-width: $desktop) {
+    @include font(900, 44px, 1.36, 0.06em);
+  }
+}
